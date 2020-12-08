@@ -49,7 +49,6 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: solid 2px orange; */
 }
 
 .section {
@@ -113,7 +112,6 @@ body {
   align-items: center;
 
   color: var(--primary-text-color);
-  fill: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -121,6 +119,7 @@ body {
 
 .contacts .icon {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .nav .link:hover,
@@ -128,21 +127,11 @@ body {
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 
 .nav .link.current {
   color: var(--accent-color);
 }
-
-/* .contacts .link::before {
-  margin-right: 10px;
-
-  width: 25px;
-  height: 25px;
-  background-color: red;
-  content: '';
-} */
 
 .logo {
   color: var(--black);
@@ -160,16 +149,16 @@ body {
 
 /* Герой */
 .hero {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: var(--hero-bg-color);
   background-image: linear-gradient(
@@ -241,33 +230,6 @@ body {
   width: 70px;
   height: 70px;
 }
-
-/* .features .item::before {
-  display: block;
-  margin-bottom: 30px;
-  content: '';
-  height: 120px;
-  background-color: var(--secondary-bg-color);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.features .item:nth-child(1)::before {
-  background-image: url(../images/details.svg);
-}
-
-.features .item:nth-child(2)::before {
-  background-image: url(../images/on-time.svg);
-}
-
-.features .item:nth-child(3)::before {
-  background-image: url(../images/planning.svg);
-}
-
-.features .item:nth-child(4)::before {
-  background-image: url(../images/modern-tech.svg);
-}
- */
 
 .features .item:last-child {
   margin-right: 0;
@@ -370,18 +332,22 @@ h3 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: var(--svg-icon-color);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  fill: var(--white);
 }
 
 .social .icon {
   width: 20px;
   height: 20px;
+  fill: var(--svg-icon-color);
+}
+
+.social-link:hover .icon,
+.social-link:focus .icon {
+  fill: var(--white);
 }
 
 /* Постоянные клиенты */
@@ -398,13 +364,20 @@ h3 {
   height: 90px;
   border: 1px solid var(--svg-icon-color);
   border-radius: 4px;
+}
+
+.clients-link .icon {
   fill: var(--svg-icon-color);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  fill: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+.clients-link:hover .icon,
+.clients-link:focus .icon {
+  fill: var(--accent-color);
 }
 
 /* Подвал */
@@ -477,8 +450,11 @@ h3 {
 }
 
 .join .social-link {
-  fill: var(--white);
   background: var(--footer-social-icon-bg);
+}
+
+.join .icon {
+  fill: var(--white);
 }
 
 .join .social-link:hover,
@@ -528,8 +504,8 @@ h3 {
   margin: 15px;
 }
 
-.projects .item:hover,
-.projects .item:focus {
+.projects .link:hover,
+.projects .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
